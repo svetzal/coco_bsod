@@ -2,6 +2,8 @@
 
 I created this little parody after the fun CrowdStrike fiasco of 2024.
 
+![BSOD](docs/screenshot.png)
+
 ## Getting Started
 
 To build this, you need [lwtools](http://www.lwtools.ca/) and
@@ -39,4 +41,5 @@ LOADM"BSOD.BIN
 EXEC12288
 ```
 
+![DECB Screenshot](docs/running.png)
 

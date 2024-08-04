@@ -43,3 +43,10 @@ EXEC12288
 
 ![DECB Screenshot](docs/running.png)
 
+# TODO
+
+I hope to add some extra details to this:
+
+- Count from 0% to 100% building the pretend dump file
+- simulate a reboot by maybe blanking and flashing the screen a couple times, maybe adding in some kind of OS loader graphic
+

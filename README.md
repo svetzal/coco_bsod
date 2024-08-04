@@ -1,6 +1,6 @@
 # CoCo Blue Screen of Death
 
-I created this little parody after the fun CrowdStrike fiasco of 2022.
+I created this little parody after the fun CrowdStrike fiasco of 2024.
 
 ## Getting Started
 

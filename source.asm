@@ -6,9 +6,9 @@
                 JSR ScreenInit
                 JSR DrawImage
 
-                LDX #$E00
-                LDA #$0
-                JSR DrawDigit
+;                LDX #$E00
+;                LDA #$0
+;                JSR DrawDigit
 
                 JSR WaitForX
                 JSR RestoreScreen

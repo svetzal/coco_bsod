@@ -4,7 +4,7 @@
                 ORG $3000
 
                 JSR ScreenInit
-;                JSR DrawImage
+                JSR DrawImage
 
                 LDX #$E00
                 LDA #$0

@@ -6,9 +6,9 @@
                 JSR ScreenInit
                 JSR DrawImage
 
-;                LDX #$E00
-;                LDA #$0
-;                JSR DrawDigit
+                LDX #$E00
+                LDA #$0
+                JSR DrawDigit
 
                 JSR WaitForX
                 JSR RestoreScreen
@@ -25,10 +25,32 @@
 ;   X - memory location to draw into
 ;
 DrawDigit       LDY #Digit0
-                LDB #$8
-DigitLoop       LDA ,Y+
+                LEAY $1,Y
+                LDB #$9
+DigitLoop       PSHS B
+                PSHS X
+
+                LDA  ,Y
+; this is a mess don't trust it!
+                STB #$4
+                ANDA #$F0
+
+                CLC
+SkipLoop        ASLA
+                BCC BitSkip
+                ORA #$2
+BitSkip         ASLA
+                ASLA
+
+
+
+
+
+                PULS X
                 STA ,X
                 LEAX $20,X
+
+                PULS B
                 DECB
                 BNE DigitLoop
                 RTS
@@ -89,17 +111,5 @@ RestoreScreen   LDA #$00
 
 
 
-
-;
-; Digits 0-9
-;
-Digit0          #%00111100
-                #%01000010
-                #%01000010
-                #%01000010
-                #%01000010
-                #%00111100
-                #%00000000
-                #%00000000
-
+                INCLUDE "digits.asm"
                 INCLUDE "imgdata.asm"
